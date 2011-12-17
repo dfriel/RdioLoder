@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B59DEBAF149C6F41008179C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBAE149C6F41008179C8 /* UIKit.framework */; };
+		B59DEBB1149C6F41008179C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB0149C6F41008179C8 /* Foundation.framework */; };
+		B59DEBB3149C6F41008179C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */; };
+		B59DEBB9149C6F41008179C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBB7149C6F41008179C8 /* InfoPlist.strings */; };
+		B59DEBBB149C6F41008179C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBBA149C6F41008179C8 /* main.m */; };
+		B59DEBBF149C6F41008179C8 /* RdioLoderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBBE149C6F41008179C8 /* RdioLoderAppDelegate.m */; };
+		B59DEBC2149C6F41008179C8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBC0149C6F41008179C8 /* MainStoryboard.storyboard */; };
+		B59DEBC5149C6F41008179C8 /* RdioLoderFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBC4149C6F41008179C8 /* RdioLoderFirstViewController.m */; };
+		B59DEBC7149C6F41008179C8 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBC6149C6F41008179C8 /* first.png */; };
+		B59DEBC9149C6F41008179C8 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBC8149C6F41008179C8 /* first@2x.png */; };
+		B59DEBCC149C6F41008179C8 /* RdioLoderSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBCB149C6F41008179C8 /* RdioLoderSecondViewController.m */; };
+		B59DEBCE149C6F41008179C8 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBCD149C6F41008179C8 /* second.png */; };
+		B59DEBD0149C6F41008179C8 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBCF149C6F41008179C8 /* second@2x.png */; };
+		B59DEBD8149C6F41008179C8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBD7149C6F41008179C8 /* SenTestingKit.framework */; };
+		B59DEBD9149C6F41008179C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBAE149C6F41008179C8 /* UIKit.framework */; };
+		B59DEBDA149C6F41008179C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB0149C6F41008179C8 /* Foundation.framework */; };
+		B59DEBE2149C6F41008179C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBE0149C6F41008179C8 /* InfoPlist.strings */; };
+		B59DEBE5149C6F41008179C8 /* RdioLoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBE4149C6F41008179C8 /* RdioLoderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B59DEBDB149C6F41008179C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B59DEBA1149C6F40008179C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B59DEBA9149C6F41008179C8;
+			remoteInfo = RdioLoder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B59DEBAA149C6F41008179C8 /* RdioLoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RdioLoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59DEBAE149C6F41008179C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B59DEBB0149C6F41008179C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B59DEBB6149C6F41008179C8 /* RdioLoder-Info.plist */ = {isa = PBXFileReference; path = "RdioLoder-Info.plist"; sourceTree = "<group>"; };
+		B59DEBB8149C6F41008179C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B59DEBBA149C6F41008179C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B59DEBBC149C6F41008179C8 /* RdioLoder-Prefix.pch */ = {isa = PBXFileReference; path = "RdioLoder-Prefix.pch"; sourceTree = "<group>"; };
+		B59DEBBD149C6F41008179C8 /* RdioLoderAppDelegate.h */ = {isa = PBXFileReference; path = RdioLoderAppDelegate.h; sourceTree = "<group>"; };
+		B59DEBBE149C6F41008179C8 /* RdioLoderAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderAppDelegate.m; sourceTree = "<group>"; };
+		B59DEBC1149C6F41008179C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B59DEBC3149C6F41008179C8 /* RdioLoderFirstViewController.h */ = {isa = PBXFileReference; path = RdioLoderFirstViewController.h; sourceTree = "<group>"; };
+		B59DEBC4149C6F41008179C8 /* RdioLoderFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderFirstViewController.m; sourceTree = "<group>"; };
+		B59DEBC6149C6F41008179C8 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		B59DEBC8149C6F41008179C8 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		B59DEBCA149C6F41008179C8 /* RdioLoderSecondViewController.h */ = {isa = PBXFileReference; path = RdioLoderSecondViewController.h; sourceTree = "<group>"; };
+		B59DEBCB149C6F41008179C8 /* RdioLoderSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderSecondViewController.m; sourceTree = "<group>"; };
+		B59DEBCD149C6F41008179C8 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		B59DEBCF149C6F41008179C8 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		B59DEBD6149C6F41008179C8 /* RdioLoderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RdioLoderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59DEBD7149C6F41008179C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B59DEBDF149C6F41008179C8 /* RdioLoderTests-Info.plist */ = {isa = PBXFileReference; path = "RdioLoderTests-Info.plist"; sourceTree = "<group>"; };
+		B59DEBE1149C6F41008179C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B59DEBE3149C6F41008179C8 /* RdioLoderTests.h */ = {isa = PBXFileReference; path = RdioLoderTests.h; sourceTree = "<group>"; };
+		B59DEBE4149C6F41008179C8 /* RdioLoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B59DEBA7149C6F41008179C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59DEBAF149C6F41008179C8 /* UIKit.framework in Frameworks */,
+				B59DEBB1149C6F41008179C8 /* Foundation.framework in Frameworks */,
+				B59DEBB3149C6F41008179C8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59DEBD2149C6F41008179C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59DEBD8149C6F41008179C8 /* SenTestingKit.framework in Frameworks */,
+				B59DEBD9149C6F41008179C8 /* UIKit.framework in Frameworks */,
+				B59DEBDA149C6F41008179C8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B59DEB9F149C6F40008179C8 = {
+			isa = PBXGroup;
+			children = (
+				B59DEBB4149C6F41008179C8 /* RdioLoder */,
+				B59DEBDD149C6F41008179C8 /* RdioLoderTests */,
+				B59DEBAD149C6F41008179C8 /* Frameworks */,
+				B59DEBAB149C6F41008179C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B59DEBAB149C6F41008179C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B59DEBAA149C6F41008179C8 /* RdioLoder.app */,
+				B59DEBD6149C6F41008179C8 /* RdioLoderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B59DEBAD149C6F41008179C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B59DEBAE149C6F41008179C8 /* UIKit.framework */,
+				B59DEBB0149C6F41008179C8 /* Foundation.framework */,
+				B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */,
+				B59DEBD7149C6F41008179C8 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B59DEBB4149C6F41008179C8 /* RdioLoder */ = {
+			isa = PBXGroup;
+			children = (
+				B59DEBBD149C6F41008179C8 /* RdioLoderAppDelegate.h */,
+				B59DEBBE149C6F41008179C8 /* RdioLoderAppDelegate.m */,
+				B59DEBC0149C6F41008179C8 /* MainStoryboard.storyboard */,
+				B59DEBC3149C6F41008179C8 /* RdioLoderFirstViewController.h */,
+				B59DEBC4149C6F41008179C8 /* RdioLoderFirstViewController.m */,
+				B59DEBC6149C6F41008179C8 /* first.png */,
+				B59DEBC8149C6F41008179C8 /* first@2x.png */,
+				B59DEBCA149C6F41008179C8 /* RdioLoderSecondViewController.h */,
+				B59DEBCB149C6F41008179C8 /* RdioLoderSecondViewController.m */,
+				B59DEBCD149C6F41008179C8 /* second.png */,
+				B59DEBCF149C6F41008179C8 /* second@2x.png */,
+				B59DEBB5149C6F41008179C8 /* Supporting Files */,
+			);
+			path = RdioLoder;
+			sourceTree = "<group>";
+		};
+		B59DEBB5149C6F41008179C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B59DEBB6149C6F41008179C8 /* RdioLoder-Info.plist */,
+				B59DEBB7149C6F41008179C8 /* InfoPlist.strings */,
+				B59DEBBA149C6F41008179C8 /* main.m */,
+				B59DEBBC149C6F41008179C8 /* RdioLoder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B59DEBDD149C6F41008179C8 /* RdioLoderTests */ = {
+			isa = PBXGroup;
+			children = (
+				B59DEBE3149C6F41008179C8 /* RdioLoderTests.h */,
+				B59DEBE4149C6F41008179C8 /* RdioLoderTests.m */,
+				B59DEBDE149C6F41008179C8 /* Supporting Files */,
+			);
+			path = RdioLoderTests;
+			sourceTree = "<group>";
+		};
+		B59DEBDE149C6F41008179C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B59DEBDF149C6F41008179C8 /* RdioLoderTests-Info.plist */,
+				B59DEBE0149C6F41008179C8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B59DEBA9149C6F41008179C8 /* RdioLoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59DEBE8149C6F41008179C8 /* Build configuration list for PBXNativeTarget "RdioLoder" */;
+			buildPhases = (
+				B59DEBA6149C6F41008179C8 /* Sources */,
+				B59DEBA7149C6F41008179C8 /* Frameworks */,
+				B59DEBA8149C6F41008179C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RdioLoder;
+			productName = RdioLoder;
+			productReference = B59DEBAA149C6F41008179C8 /* RdioLoder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B59DEBD5149C6F41008179C8 /* RdioLoderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59DEBEB149C6F41008179C8 /* Build configuration list for PBXNativeTarget "RdioLoderTests" */;
+			buildPhases = (
+				B59DEBD1149C6F41008179C8 /* Sources */,
+				B59DEBD2149C6F41008179C8 /* Frameworks */,
+				B59DEBD3149C6F41008179C8 /* Resources */,
+				B59DEBD4149C6F41008179C8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B59DEBDC149C6F41008179C8 /* PBXTargetDependency */,
+			);
+			name = RdioLoderTests;
+			productName = RdioLoderTests;
+			productReference = B59DEBD6149C6F41008179C8 /* RdioLoderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B59DEBA1149C6F40008179C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B59DEBA4149C6F40008179C8 /* Build configuration list for PBXProject "RdioLoder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B59DEB9F149C6F40008179C8;
+			productRefGroup = B59DEBAB149C6F41008179C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B59DEBA9149C6F41008179C8 /* RdioLoder */,
+				B59DEBD5149C6F41008179C8 /* RdioLoderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B59DEBA8149C6F41008179C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59DEBB9149C6F41008179C8 /* InfoPlist.strings in Resources */,
+				B59DEBC2149C6F41008179C8 /* MainStoryboard.storyboard in Resources */,
+				B59DEBC7149C6F41008179C8 /* first.png in Resources */,
+				B59DEBC9149C6F41008179C8 /* first@2x.png in Resources */,
+				B59DEBCE149C6F41008179C8 /* second.png in Resources */,
+				B59DEBD0149C6F41008179C8 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59DEBD3149C6F41008179C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59DEBE2149C6F41008179C8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B59DEBD4149C6F41008179C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B59DEBA6149C6F41008179C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59DEBBB149C6F41008179C8 /* main.m in Sources */,
+				B59DEBBF149C6F41008179C8 /* RdioLoderAppDelegate.m in Sources */,
+				B59DEBC5149C6F41008179C8 /* RdioLoderFirstViewController.m in Sources */,
+				B59DEBCC149C6F41008179C8 /* RdioLoderSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59DEBD1149C6F41008179C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59DEBE5149C6F41008179C8 /* RdioLoderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B59DEBDC149C6F41008179C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B59DEBA9149C6F41008179C8 /* RdioLoder */;
+			targetProxy = B59DEBDB149C6F41008179C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B59DEBB7149C6F41008179C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B59DEBB8149C6F41008179C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B59DEBC0149C6F41008179C8 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B59DEBC1149C6F41008179C8 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		B59DEBE0149C6F41008179C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B59DEBE1149C6F41008179C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B59DEBE6149C6F41008179C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B59DEBE7149C6F41008179C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B59DEBE9149C6F41008179C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RdioLoder/RdioLoder-Prefix.pch";
+				INFOPLIST_FILE = "RdioLoder/RdioLoder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B59DEBEA149C6F41008179C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RdioLoder/RdioLoder-Prefix.pch";
+				INFOPLIST_FILE = "RdioLoder/RdioLoder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B59DEBEC149C6F41008179C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RdioLoder.app/RdioLoder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RdioLoder/RdioLoder-Prefix.pch";
+				INFOPLIST_FILE = "RdioLoderTests/RdioLoderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B59DEBED149C6F41008179C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RdioLoder.app/RdioLoder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RdioLoder/RdioLoder-Prefix.pch";
+				INFOPLIST_FILE = "RdioLoderTests/RdioLoderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B59DEBA4149C6F40008179C8 /* Build configuration list for PBXProject "RdioLoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59DEBE6149C6F41008179C8 /* Debug */,
+				B59DEBE7149C6F41008179C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B59DEBE8149C6F41008179C8 /* Build configuration list for PBXNativeTarget "RdioLoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59DEBE9149C6F41008179C8 /* Debug */,
+				B59DEBEA149C6F41008179C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B59DEBEB149C6F41008179C8 /* Build configuration list for PBXNativeTarget "RdioLoderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59DEBEC149C6F41008179C8 /* Debug */,
+				B59DEBED149C6F41008179C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B59DEBA1149C6F40008179C8 /* Project object */;
+}
