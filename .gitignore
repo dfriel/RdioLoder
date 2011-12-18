@@ -1,0 +1,5 @@
+build
+RdioLoder.xcodeproj/*.mode1v3
+RdioLoder.xcodeproj/*.pbxuser
+ConsumerCredentials.h
+.*.swp

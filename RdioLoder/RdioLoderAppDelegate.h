@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RdioLoderAppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface RdioLoderAppDelegate : UIResponder <UIApplicationDelegate> 
 @property (strong, nonatomic) UIWindow *window;
 
 @end

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B52A58B4149DA6A2000FDF0B /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A58B3149DA6A2000FDF0B /* SongViewController.m */; };
+		B52A58B6149DC29D000FDF0B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58B5149DC29D000FDF0B /* CFNetwork.framework */; };
+		B52A58B8149DC2A6000FDF0B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58B7149DC2A6000FDF0B /* SystemConfiguration.framework */; };
+		B52A58BA149DC2D4000FDF0B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58B9149DC2D4000FDF0B /* AudioToolbox.framework */; };
+		B52A58BC149DC2E1000FDF0B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58BB149DC2E1000FDF0B /* Security.framework */; };
+		B52A58BE149DC381000FDF0B /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58BD149DC381000FDF0B /* Rdio.framework */; };
 		B59DEBAF149C6F41008179C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBAE149C6F41008179C8 /* UIKit.framework */; };
 		B59DEBB1149C6F41008179C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB0149C6F41008179C8 /* Foundation.framework */; };
 		B59DEBB3149C6F41008179C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */; };
@@ -14,10 +20,10 @@
 		B59DEBBB149C6F41008179C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBBA149C6F41008179C8 /* main.m */; };
 		B59DEBBF149C6F41008179C8 /* RdioLoderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBBE149C6F41008179C8 /* RdioLoderAppDelegate.m */; };
 		B59DEBC2149C6F41008179C8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBC0149C6F41008179C8 /* MainStoryboard.storyboard */; };
-		B59DEBC5149C6F41008179C8 /* RdioLoderFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBC4149C6F41008179C8 /* RdioLoderFirstViewController.m */; };
+		B59DEBC5149C6F41008179C8 /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBC4149C6F41008179C8 /* PlaylistViewController.m */; };
 		B59DEBC7149C6F41008179C8 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBC6149C6F41008179C8 /* first.png */; };
 		B59DEBC9149C6F41008179C8 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBC8149C6F41008179C8 /* first@2x.png */; };
-		B59DEBCC149C6F41008179C8 /* RdioLoderSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBCB149C6F41008179C8 /* RdioLoderSecondViewController.m */; };
+		B59DEBCC149C6F41008179C8 /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBCB149C6F41008179C8 /* AlbumViewController.m */; };
 		B59DEBCE149C6F41008179C8 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBCD149C6F41008179C8 /* second.png */; };
 		B59DEBD0149C6F41008179C8 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBCF149C6F41008179C8 /* second@2x.png */; };
 		B59DEBD8149C6F41008179C8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBD7149C6F41008179C8 /* SenTestingKit.framework */; };
@@ -25,6 +31,8 @@
 		B59DEBDA149C6F41008179C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB0149C6F41008179C8 /* Foundation.framework */; };
 		B59DEBE2149C6F41008179C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBE0149C6F41008179C8 /* InfoPlist.strings */; };
 		B59DEBE5149C6F41008179C8 /* RdioLoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBE4149C6F41008179C8 /* RdioLoderTests.m */; };
+		B59DEBEF149C7022008179C8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBEE149C7022008179C8 /* MediaPlayer.framework */; };
+		B59DEBF0149C7038008179C8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBEE149C7022008179C8 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,31 +46,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B52A58B2149DA6A2000FDF0B /* SongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
+		B52A58B3149DA6A2000FDF0B /* SongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
+		B52A58B5149DC29D000FDF0B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B52A58B7149DC2A6000FDF0B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B52A58B9149DC2D4000FDF0B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B52A58BB149DC2E1000FDF0B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B52A58BD149DC381000FDF0B /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rdio.framework; sourceTree = "<group>"; };
+		B52A58BF149DC4BD000FDF0B /* ConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerCredentials.h; sourceTree = "<group>"; };
 		B59DEBAA149C6F41008179C8 /* RdioLoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RdioLoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59DEBAE149C6F41008179C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B59DEBB0149C6F41008179C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B59DEBB6149C6F41008179C8 /* RdioLoder-Info.plist */ = {isa = PBXFileReference; path = "RdioLoder-Info.plist"; sourceTree = "<group>"; };
+		B59DEBB6149C6F41008179C8 /* RdioLoder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RdioLoder-Info.plist"; sourceTree = "<group>"; };
 		B59DEBB8149C6F41008179C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B59DEBBA149C6F41008179C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B59DEBBC149C6F41008179C8 /* RdioLoder-Prefix.pch */ = {isa = PBXFileReference; path = "RdioLoder-Prefix.pch"; sourceTree = "<group>"; };
-		B59DEBBD149C6F41008179C8 /* RdioLoderAppDelegate.h */ = {isa = PBXFileReference; path = RdioLoderAppDelegate.h; sourceTree = "<group>"; };
+		B59DEBBC149C6F41008179C8 /* RdioLoder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RdioLoder-Prefix.pch"; sourceTree = "<group>"; };
+		B59DEBBD149C6F41008179C8 /* RdioLoderAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RdioLoderAppDelegate.h; sourceTree = "<group>"; };
 		B59DEBBE149C6F41008179C8 /* RdioLoderAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderAppDelegate.m; sourceTree = "<group>"; };
 		B59DEBC1149C6F41008179C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B59DEBC3149C6F41008179C8 /* RdioLoderFirstViewController.h */ = {isa = PBXFileReference; path = RdioLoderFirstViewController.h; sourceTree = "<group>"; };
-		B59DEBC4149C6F41008179C8 /* RdioLoderFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderFirstViewController.m; sourceTree = "<group>"; };
+		B59DEBC3149C6F41008179C8 /* PlaylistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaylistViewController.h; sourceTree = "<group>"; };
+		B59DEBC4149C6F41008179C8 /* PlaylistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
 		B59DEBC6149C6F41008179C8 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		B59DEBC8149C6F41008179C8 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		B59DEBCA149C6F41008179C8 /* RdioLoderSecondViewController.h */ = {isa = PBXFileReference; path = RdioLoderSecondViewController.h; sourceTree = "<group>"; };
-		B59DEBCB149C6F41008179C8 /* RdioLoderSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderSecondViewController.m; sourceTree = "<group>"; };
+		B59DEBCA149C6F41008179C8 /* AlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
+		B59DEBCB149C6F41008179C8 /* AlbumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
 		B59DEBCD149C6F41008179C8 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		B59DEBCF149C6F41008179C8 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		B59DEBD6149C6F41008179C8 /* RdioLoderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RdioLoderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59DEBD7149C6F41008179C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B59DEBDF149C6F41008179C8 /* RdioLoderTests-Info.plist */ = {isa = PBXFileReference; path = "RdioLoderTests-Info.plist"; sourceTree = "<group>"; };
+		B59DEBDF149C6F41008179C8 /* RdioLoderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RdioLoderTests-Info.plist"; sourceTree = "<group>"; };
 		B59DEBE1149C6F41008179C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B59DEBE3149C6F41008179C8 /* RdioLoderTests.h */ = {isa = PBXFileReference; path = RdioLoderTests.h; sourceTree = "<group>"; };
+		B59DEBE3149C6F41008179C8 /* RdioLoderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RdioLoderTests.h; sourceTree = "<group>"; };
 		B59DEBE4149C6F41008179C8 /* RdioLoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderTests.m; sourceTree = "<group>"; };
+		B59DEBEE149C7022008179C8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +87,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52A58BC149DC2E1000FDF0B /* Security.framework in Frameworks */,
+				B52A58BA149DC2D4000FDF0B /* AudioToolbox.framework in Frameworks */,
+				B52A58B8149DC2A6000FDF0B /* SystemConfiguration.framework in Frameworks */,
+				B52A58B6149DC29D000FDF0B /* CFNetwork.framework in Frameworks */,
+				B59DEBEF149C7022008179C8 /* MediaPlayer.framework in Frameworks */,
 				B59DEBAF149C6F41008179C8 /* UIKit.framework in Frameworks */,
 				B59DEBB1149C6F41008179C8 /* Foundation.framework in Frameworks */,
 				B59DEBB3149C6F41008179C8 /* CoreGraphics.framework in Frameworks */,
+				B52A58BE149DC381000FDF0B /* Rdio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59DEBF0149C7038008179C8 /* MediaPlayer.framework in Frameworks */,
 				B59DEBD8149C6F41008179C8 /* SenTestingKit.framework in Frameworks */,
 				B59DEBD9149C6F41008179C8 /* UIKit.framework in Frameworks */,
 				B59DEBDA149C6F41008179C8 /* Foundation.framework in Frameworks */,
@@ -111,6 +135,12 @@
 		B59DEBAD149C6F41008179C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B52A58BD149DC381000FDF0B /* Rdio.framework */,
+				B52A58BB149DC2E1000FDF0B /* Security.framework */,
+				B52A58B9149DC2D4000FDF0B /* AudioToolbox.framework */,
+				B52A58B7149DC2A6000FDF0B /* SystemConfiguration.framework */,
+				B52A58B5149DC29D000FDF0B /* CFNetwork.framework */,
+				B59DEBEE149C7022008179C8 /* MediaPlayer.framework */,
 				B59DEBAE149C6F41008179C8 /* UIKit.framework */,
 				B59DEBB0149C6F41008179C8 /* Foundation.framework */,
 				B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */,
@@ -125,15 +155,18 @@
 				B59DEBBD149C6F41008179C8 /* RdioLoderAppDelegate.h */,
 				B59DEBBE149C6F41008179C8 /* RdioLoderAppDelegate.m */,
 				B59DEBC0149C6F41008179C8 /* MainStoryboard.storyboard */,
-				B59DEBC3149C6F41008179C8 /* RdioLoderFirstViewController.h */,
-				B59DEBC4149C6F41008179C8 /* RdioLoderFirstViewController.m */,
+				B59DEBC3149C6F41008179C8 /* PlaylistViewController.h */,
+				B59DEBC4149C6F41008179C8 /* PlaylistViewController.m */,
 				B59DEBC6149C6F41008179C8 /* first.png */,
 				B59DEBC8149C6F41008179C8 /* first@2x.png */,
-				B59DEBCA149C6F41008179C8 /* RdioLoderSecondViewController.h */,
-				B59DEBCB149C6F41008179C8 /* RdioLoderSecondViewController.m */,
+				B59DEBCA149C6F41008179C8 /* AlbumViewController.h */,
+				B59DEBCB149C6F41008179C8 /* AlbumViewController.m */,
 				B59DEBCD149C6F41008179C8 /* second.png */,
 				B59DEBCF149C6F41008179C8 /* second@2x.png */,
+				B52A58B2149DA6A2000FDF0B /* SongViewController.h */,
+				B52A58B3149DA6A2000FDF0B /* SongViewController.m */,
 				B59DEBB5149C6F41008179C8 /* Supporting Files */,
+				B52A58BF149DC4BD000FDF0B /* ConsumerCredentials.h */,
 			);
 			path = RdioLoder;
 			sourceTree = "<group>";
@@ -280,8 +313,9 @@
 			files = (
 				B59DEBBB149C6F41008179C8 /* main.m in Sources */,
 				B59DEBBF149C6F41008179C8 /* RdioLoderAppDelegate.m in Sources */,
-				B59DEBC5149C6F41008179C8 /* RdioLoderFirstViewController.m in Sources */,
-				B59DEBCC149C6F41008179C8 /* RdioLoderSecondViewController.m in Sources */,
+				B59DEBC5149C6F41008179C8 /* PlaylistViewController.m in Sources */,
+				B59DEBCC149C6F41008179C8 /* AlbumViewController.m in Sources */,
+				B52A58B4149DA6A2000FDF0B /* SongViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +386,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -371,6 +406,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -379,6 +415,10 @@
 		B59DEBE9149C6F41008179C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RdioLoder/RdioLoder-Prefix.pch";
 				INFOPLIST_FILE = "RdioLoder/RdioLoder-Info.plist";
@@ -390,6 +430,10 @@
 		B59DEBEA149C6F41008179C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RdioLoder/RdioLoder-Prefix.pch";
 				INFOPLIST_FILE = "RdioLoder/RdioLoder-Info.plist";
@@ -451,6 +495,7 @@
 				B59DEBEA149C6F41008179C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B59DEBEB149C6F41008179C8 /* Build configuration list for PBXNativeTarget "RdioLoderTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +504,7 @@
 				B59DEBED149C6F41008179C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
