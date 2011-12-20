@@ -78,6 +78,8 @@
     } else {
         [rdio authorizeUsingAccessToken:self.accessToken fromController:self];
     }
+    
+
 }
 
 /**

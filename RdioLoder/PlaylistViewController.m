@@ -76,6 +76,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:playlistIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:playlistIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;         
     }
     
     NSUInteger row = [indexPath row];    

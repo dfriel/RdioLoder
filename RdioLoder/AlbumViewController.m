@@ -75,12 +75,15 @@
     NSString *albumIdentifier = @"AlbumIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:albumIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:albumIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:albumIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;        
     }
     
     NSUInteger row = [indexPath row];    
     NSString *titleIDKey = [MPMediaItem titlePropertyForGroupingType: MPMediaGroupingAlbum];
+    NSString *artistIDKey = [MPMediaItem titlePropertyForGroupingType: MPMediaGroupingArtist];
     cell.textLabel.text = [[[self.albums objectAtIndex:row] representativeItem] valueForProperty: titleIDKey];
+    cell.detailTextLabel.text = [[[self.albums objectAtIndex:row] representativeItem] valueForProperty: artistIDKey];
     return cell;
 }
 
