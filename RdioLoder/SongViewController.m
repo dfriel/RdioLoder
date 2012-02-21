@@ -11,8 +11,11 @@
 @implementation SongViewController
 
 @synthesize songs;
+@synthesize album;
 @synthesize rdio;
 @synthesize accessToken;
+@synthesize popoverController;
+@synthesize uploadButton;
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,20 +29,33 @@
 {
     [super viewDidLoad];
     rdio = [[Rdio alloc] initWithConsumerKey:CONSUMER_KEY andSecret:CONSUMER_SECRET delegate:self]; 
+
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+	
+	if (standardUserDefaults != nil) {
+		self.accessToken = [standardUserDefaults objectForKey:@"accessToken"];    
+    }
     
-    UIBarButtonItem *btnUpload = [[UIBarButtonItem alloc] 
-                                initWithTitle:@"Uplod"                                            
-                                style:UIBarButtonItemStyleBordered 
-                                target:self 
-                                action:@selector(upload:)];
-    self.navigationItem.rightBarButtonItem = btnUpload;
+    if (self.accessToken != nil) {
+        uploadButton = [[UIBarButtonItem alloc] 
+                        initWithTitle:@"Uplod"                                            
+                        style:UIBarButtonItemStyleBordered 
+                        target:self 
+                        action:@selector(upload:)];         
+    } else {
+        uploadButton = [[UIBarButtonItem alloc] 
+                        initWithTitle:@"Login"                                            
+                        style:UIBarButtonItemStyleBordered 
+                        target:self 
+                        action:@selector(login:)];        
+    }
+    
+    self.navigationItem.rightBarButtonItem = uploadButton;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    [rdio logout];
-    self.accessToken = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -72,23 +88,31 @@
 #pragma mark -
 #pragma mark Rdio Delegate Methods
 
-- (IBAction) upload:(id) button {
-    if (accessToken == nil) {
-        [rdio authorizeFromController:self];
-    } else {
-        [rdio authorizeUsingAccessToken:self.accessToken fromController:self];
-    }
-    
-
+- (IBAction) login:(id) button {
+    [rdio authorizeFromController:self];
 }
+
+- (IBAction) upload:(id) button {
+    [rdio authorizeUsingAccessToken:self.accessToken fromController:self];
+
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"albums", @"types", album, @"query", nil];
+    
+    [rdio callAPIMethod:@"search" withParameters:params delegate:self];         
+}
+
 
 /**
  * Called when an authorize request finishes successfully. 
  * @param user A dictionary containing information about the user that was authorized. See http://developer.rdio.com/docs/read/rest/types
  * @param accessToken A token that can be used to automatically reauthorize the current user in subsequent sessions
  */
-- (void)rdioDidAuthorizeUser:(NSDictionary *)user withAccessToken:(NSString *)token {
-    self.accessToken = token;
+- (void)rdioDidAuthorizeUser:(NSDictionary *)user withAccessToken:(NSString *)token {  
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+	if (standardUserDefaults != nil) {
+		[standardUserDefaults setObject:token forKey:@"accessToken"];
+		[standardUserDefaults synchronize];
+	}
 }
 
 /**
@@ -97,7 +121,12 @@
  * @param error A message describing what went wrong.
  */
 - (void)rdioAuthorizationFailed:(NSString *)error {
-    self.accessToken = nil;
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+	if (standardUserDefaults != nil) {
+		[standardUserDefaults removeObjectForKey:@"accessToken"];
+		[standardUserDefaults synchronize];
+	}
 }
 
 /**
@@ -105,6 +134,12 @@
  */
 - (void)rdioAuthorizationCancelled {
     self.accessToken = nil;
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+	if (standardUserDefaults != nil) {
+		[standardUserDefaults removeObjectForKey:@"accessToken"];
+		[standardUserDefaults synchronize];
+	}    
 }
 
 /**
@@ -112,6 +147,44 @@
  */
 -(void)rdioDidLogout {
     self.accessToken = nil;
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+	if (standardUserDefaults != nil) {
+		[standardUserDefaults removeObjectForKey:@"accessToken"];
+		[standardUserDefaults synchronize];
+	}
+}
+
+/**
+ * Our API call has returned successfully.
+ * the data parameter can be an NSDictionary, NSArray, or NSData 
+ * depending on the call we made.
+ *
+ * Here we will inspect the parameters property of the returned RDAPIRequest
+ * to see what method has returned.
+ */
+- (void)rdioRequest:(RDAPIRequest *)request didLoadData:(id)data {
+    NSString *method = [request.parameters objectForKey:@"method"];
+    if([method isEqualToString:@"search"]) {
+        albums = [[NSMutableArray alloc] initWithArray:[data objectForKey:@"results"]];
+                
+        if (!self.popoverController) {
+            ResultsViewController *resultsViewController = [[ResultsViewController alloc] initWithStyle:UITableViewStylePlain];
+            self.popoverController = [[[WEPopoverController class] alloc] initWithContentViewController:resultsViewController];
+            
+            resultsViewController.albums = albums;
+            resultsViewController.popoverController = self.popoverController;            
+            self.popoverController.passthroughViews = [NSArray arrayWithObject:self.navigationController.navigationBar];
+        }
+
+        [self.popoverController presentPopoverFromBarButtonItem:uploadButton 
+                                       permittedArrowDirections:(UIPopoverArrowDirectionUp|UIPopoverArrowDirectionDown) 
+                                                       animated:YES];        
+    }
+}
+
+- (void)rdioRequest:(RDAPIRequest *)request didFailWithError:(NSError*)error {
+    
 }
 
 
@@ -135,5 +208,6 @@
     cell.textLabel.text = [[songs objectAtIndex:row] valueForProperty: MPMediaItemPropertyTitle];
     return cell;
 }
+
 
 @end

@@ -91,8 +91,10 @@
     SongViewController *songViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SongViewController"];
     NSUInteger row = [indexPath row];  
     songViewController.songs = [[self.albums objectAtIndex:row] items];
-    
+    NSString *titleIDKey = [MPMediaItem titlePropertyForGroupingType: MPMediaGroupingAlbum];
+    songViewController.album = [[[self.albums objectAtIndex:row] representativeItem] valueForProperty: titleIDKey];
     [self.navigationController pushViewController:songViewController animated:YES];
 }
+
 
 @end

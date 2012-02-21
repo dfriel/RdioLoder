@@ -10,7 +10,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "SongViewController.h"
 
-@interface AlbumViewController : UIViewController <UITableViewDelegate,UITableViewDataSource> 
+@interface AlbumViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> 
 
 @property(nonatomic, retain) NSArray *albums;
 
