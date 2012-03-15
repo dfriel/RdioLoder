@@ -12,7 +12,6 @@
 
 @synthesize songs;
 @synthesize album;
-@synthesize rdio;
 @synthesize accessToken;
 @synthesize popoverController;
 @synthesize uploadButton;
@@ -28,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    rdio = [[Rdio alloc] initWithConsumerKey:CONSUMER_KEY andSecret:CONSUMER_SECRET delegate:self]; 
 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
 	
@@ -89,71 +87,20 @@
 #pragma mark Rdio Delegate Methods
 
 - (IBAction) login:(id) button {
-    [rdio authorizeFromController:self];
+    RdioLoderAppDelegate *delegate = (RdioLoderAppDelegate *) [[UIApplication sharedApplication] delegate];
+    [delegate.rdio authorizeFromController:self];
 }
 
 - (IBAction) upload:(id) button {
-    [rdio authorizeUsingAccessToken:self.accessToken fromController:self];
+    RdioLoderAppDelegate *delegate = (RdioLoderAppDelegate *) [[UIApplication sharedApplication] delegate];
+    
+    [delegate.rdio authorizeUsingAccessToken:self.accessToken fromController:self];
 
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"albums", @"types", album, @"query", nil];
     
-    [rdio callAPIMethod:@"search" withParameters:params delegate:self];         
+    [delegate.rdio callAPIMethod:@"search" withParameters:params delegate:self];         
 }
 
-
-/**
- * Called when an authorize request finishes successfully. 
- * @param user A dictionary containing information about the user that was authorized. See http://developer.rdio.com/docs/read/rest/types
- * @param accessToken A token that can be used to automatically reauthorize the current user in subsequent sessions
- */
-- (void)rdioDidAuthorizeUser:(NSDictionary *)user withAccessToken:(NSString *)token {  
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    
-	if (standardUserDefaults != nil) {
-		[standardUserDefaults setObject:token forKey:@"accessToken"];
-		[standardUserDefaults synchronize];
-	}
-}
-
-/**
- * Called if authorization cannot be completed due to network or server problems.
- * The user will be notified from the login view before this method is called.
- * @param error A message describing what went wrong.
- */
-- (void)rdioAuthorizationFailed:(NSString *)error {
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    
-	if (standardUserDefaults != nil) {
-		[standardUserDefaults removeObjectForKey:@"accessToken"];
-		[standardUserDefaults synchronize];
-	}
-}
-
-/**
- * Called if the user aborts the authorization process.
- */
-- (void)rdioAuthorizationCancelled {
-    self.accessToken = nil;
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    
-	if (standardUserDefaults != nil) {
-		[standardUserDefaults removeObjectForKey:@"accessToken"];
-		[standardUserDefaults synchronize];
-	}    
-}
-
-/**
- * Called when logout completes.
- */
--(void)rdioDidLogout {
-    self.accessToken = nil;
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    
-	if (standardUserDefaults != nil) {
-		[standardUserDefaults removeObjectForKey:@"accessToken"];
-		[standardUserDefaults synchronize];
-	}
-}
 
 /**
  * Our API call has returned successfully.

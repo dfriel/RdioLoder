@@ -3,3 +3,5 @@ RdioLoder.xcodeproj/*.mode1v3
 RdioLoder.xcodeproj/*.pbxuser
 ConsumerCredentials.h
 .*.swp
+RdioLoder.xcodeproj/project.xcworkspace/xcuserdata
+RdioLoder.xcodeproj/xcuserdata

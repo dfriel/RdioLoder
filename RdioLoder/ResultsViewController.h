@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "WEPopoverController.h"
+#import "RdioLoderAppDelegate.h"
 
-@interface ResultsViewController : UITableViewController
+@interface ResultsViewController : UITableViewController <RDAPIRequestDelegate>
 
 @property(nonatomic, retain) NSMutableArray* albums;
 @property(nonatomic, retain) WEPopoverController *popoverController;

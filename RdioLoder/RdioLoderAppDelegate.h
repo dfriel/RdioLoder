@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Rdio/Rdio.h>
+#import "ConsumerCredentials.h"
 
-@interface RdioLoderAppDelegate : UIResponder <UIApplicationDelegate> 
+@interface RdioLoderAppDelegate : UIResponder <UIApplicationDelegate, RdioDelegate> 
+
 @property (strong, nonatomic) UIWindow *window;
+@property(nonatomic, retain) Rdio *rdio;
 
 @end

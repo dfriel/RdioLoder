@@ -8,7 +8,6 @@
 
 #import "ResultsViewController.h"
 
-
 @implementation ResultsViewController
 
 @synthesize albums, popoverController;
@@ -114,6 +113,38 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    RdioLoderAppDelegate *delegate = (RdioLoderAppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+	
+    NSString *accessToken;
+	if (standardUserDefaults != nil) {
+		accessToken = [standardUserDefaults objectForKey:@"accessToken"];    
+    }
+    
+    [delegate.rdio authorizeUsingAccessToken:accessToken fromController:self];
+
+    NSDictionary *data = [albums objectAtIndex:[indexPath row]];   
+    
+    NSString *tracks = [[[data objectForKey:@"trackKeys"] valueForKey:@"description"] componentsJoinedByString:@","];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:tracks, @"keys", nil];
+    
+    [delegate.rdio callAPIMethod:@"addToCollection" withParameters:params delegate:self];       
+}
+
+/**
+ * Our API call has returned successfully.
+ * the data parameter can be an NSDictionary, NSArray, or NSData 
+ * depending on the call we made.
+ *
+ * Here we will inspect the parameters property of the returned RDAPIRequest
+ * to see what method has returned.
+ */
+- (void)rdioRequest:(RDAPIRequest *)request didLoadData:(id)data {
+    [popoverController dismissPopoverAnimated:YES];
+}
+
+- (void)rdioRequest:(RDAPIRequest *)request didFailWithError:(NSError*)error {
     [popoverController dismissPopoverAnimated:YES];
 }
 

@@ -11,10 +11,13 @@
 @implementation RdioLoderAppDelegate
 
 @synthesize window = _window;
+@synthesize rdio;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.  
+    rdio = [[Rdio alloc] initWithConsumerKey:CONSUMER_KEY andSecret:CONSUMER_SECRET delegate:self]; 
+    
     return YES;
 }
 							
@@ -55,6 +58,57 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+/**
+ * Called when an authorize request finishes successfully. 
+ * @param user A dictionary containing information about the user that was authorized. See http://developer.rdio.com/docs/read/rest/types
+ * @param accessToken A token that can be used to automatically reauthorize the current user in subsequent sessions
+ */
+- (void)rdioDidAuthorizeUser:(NSDictionary *)user withAccessToken:(NSString *)token {  
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+	if (standardUserDefaults != nil) {
+		[standardUserDefaults setObject:token forKey:@"accessToken"];
+		[standardUserDefaults synchronize];
+	}
+}
+/**
+ * Called if authorization cannot be completed due to network or server problems.
+ * The user will be notified from the login view before this method is called.
+ * @param error A message describing what went wrong.
+ */
+- (void)rdioAuthorizationFailed:(NSString *)error {
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+	if (standardUserDefaults != nil) {
+		[standardUserDefaults removeObjectForKey:@"accessToken"];
+		[standardUserDefaults synchronize];
+	}
+}
+
+/**
+ * Called if the user aborts the authorization process.
+ */
+- (void)rdioAuthorizationCancelled {
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+	if (standardUserDefaults != nil) {
+		[standardUserDefaults removeObjectForKey:@"accessToken"];
+		[standardUserDefaults synchronize];
+	}    
+}
+
+/**
+ * Called when logout completes.
+ */
+-(void)rdioDidLogout {
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+	if (standardUserDefaults != nil) {
+		[standardUserDefaults removeObjectForKey:@"accessToken"];
+		[standardUserDefaults synchronize];
+	}
 }
 
 @end

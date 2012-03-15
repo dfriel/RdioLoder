@@ -28,6 +28,7 @@
 		B545AA3C14F367CD000AA3BF /* popoverBg.png in Resources */ = {isa = PBXBuildFile; fileRef = B545AA2D14F367CD000AA3BF /* popoverBg.png */; };
 		B545AA3D14F367CD000AA3BF /* popoverBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B545AA2E14F367CD000AA3BF /* popoverBg@2x.png */; };
 		B545AA3E14F367CD000AA3BF /* popoverBgSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = B545AA2F14F367CD000AA3BF /* popoverBgSimple.png */; };
+		B545AA4614F4D358000AA3BF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B545AA4514F4D358000AA3BF /* MBProgressHUD.m */; };
 		B59DEBAF149C6F41008179C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBAE149C6F41008179C8 /* UIKit.framework */; };
 		B59DEBB1149C6F41008179C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB0149C6F41008179C8 /* Foundation.framework */; };
 		B59DEBB3149C6F41008179C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */; };
@@ -89,6 +90,8 @@
 		B545AA2D14F367CD000AA3BF /* popoverBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverBg.png; sourceTree = "<group>"; };
 		B545AA2E14F367CD000AA3BF /* popoverBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverBg@2x.png"; sourceTree = "<group>"; };
 		B545AA2F14F367CD000AA3BF /* popoverBgSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverBgSimple.png; sourceTree = "<group>"; };
+		B545AA4414F4D358000AA3BF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		B545AA4514F4D358000AA3BF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		B59DEBAA149C6F41008179C8 /* RdioLoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RdioLoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59DEBAE149C6F41008179C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B59DEBB0149C6F41008179C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -198,6 +201,8 @@
 		B59DEBB4149C6F41008179C8 /* RdioLoder */ = {
 			isa = PBXGroup;
 			children = (
+				B545AA4414F4D358000AA3BF /* MBProgressHUD.h */,
+				B545AA4514F4D358000AA3BF /* MBProgressHUD.m */,
 				B5DEAA0B14EB838000339A5B /* Popover */,
 				B59DEBBD149C6F41008179C8 /* RdioLoderAppDelegate.h */,
 				B59DEBBE149C6F41008179C8 /* RdioLoderAppDelegate.m */,
@@ -416,6 +421,7 @@
 				B5DEAA1714EB838000339A5B /* WEPopoverController.m in Sources */,
 				B5DEAA1814EB838000339A5B /* WETouchableView.m in Sources */,
 				B5DEAA1C14EB8A5000339A5B /* ResultsViewController.m in Sources */,
+				B545AA4614F4D358000AA3BF /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
