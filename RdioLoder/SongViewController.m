@@ -1,9 +1,8 @@
 //
-//  SongViewController.m
-//  RdioLoder
+// SongViewController.m
+// RdioLoder
 //
-//  Created by Dustin Friel on 11-12-17.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+// Created by Dustin Friel on 11-12-17.
 //
 
 #import "SongViewController.h"

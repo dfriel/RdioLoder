@@ -3,7 +3,6 @@
 //  RdioLoder
 //
 //  Created by Dustin Friel on 12-02-14.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "ResultsViewController.h"
