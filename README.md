@@ -1,5 +1,7 @@
-[RdioLodr](http://rdio.com/) - Add albums and playlists to Rdio
+RdioLodr - Add iPhone music and playlists to [rdio](http://rdio.com/) 
 ===============================================================
+
+This project uses the Rdio API but is not endorsed, certified or otherwise approved in any way by Rdio®.
 
 Goals
 --------------------------------------
@@ -7,7 +9,7 @@ Goals
 * Maintain a github public repository 
 * Easily add iPhone playlists to my Rdio account
 * Easily add iPhone music to my rdio collection
-* Actually write some GHUnit tests (no really)
+* Actually write some OCUnit/OCMock tests (no really)
 
 Usage
 --------------------------------------

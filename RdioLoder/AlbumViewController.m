@@ -1,9 +1,8 @@
 //
-//  RdioLoderSecondViewController.m
-//  RdioLoder
+// RdioLoderSecondViewController.m
+// RdioLoder
 //
-//  Created by Dustin Friel on 11-12-16.
-//
+// Created by Dustin Friel on 11-12-16.
 
 #import "AlbumViewController.h"
 

@@ -29,6 +29,14 @@
 		B545AA3D14F367CD000AA3BF /* popoverBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B545AA2E14F367CD000AA3BF /* popoverBg@2x.png */; };
 		B545AA3E14F367CD000AA3BF /* popoverBgSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = B545AA2F14F367CD000AA3BF /* popoverBgSimple.png */; };
 		B545AA4614F4D358000AA3BF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B545AA4514F4D358000AA3BF /* MBProgressHUD.m */; };
+		B58F105F1532A88E00B74213 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F105E1532A88E00B74213 /* libOCMock.a */; };
+		B58F10621532ACBE00B74213 /* PlaylistViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F10611532ACBE00B74213 /* PlaylistViewControllerTest.m */; };
+		B58F10631532B03100B74213 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58B9149DC2D4000FDF0B /* AudioToolbox.framework */; };
+		B58F10641532B03100B74213 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58BB149DC2E1000FDF0B /* Security.framework */; };
+		B58F10651532B04B00B74213 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58B5149DC29D000FDF0B /* CFNetwork.framework */; };
+		B58F10661532B04B00B74213 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58B7149DC2A6000FDF0B /* SystemConfiguration.framework */; };
+		B58F10671532B0A900B74213 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */; };
+		B58F10681532B0CC00B74213 /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52A58BD149DC381000FDF0B /* Rdio.framework */; };
 		B59DEBAF149C6F41008179C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBAE149C6F41008179C8 /* UIKit.framework */; };
 		B59DEBB1149C6F41008179C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB0149C6F41008179C8 /* Foundation.framework */; };
 		B59DEBB3149C6F41008179C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB2149C6F41008179C8 /* CoreGraphics.framework */; };
@@ -46,7 +54,6 @@
 		B59DEBD9149C6F41008179C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBAE149C6F41008179C8 /* UIKit.framework */; };
 		B59DEBDA149C6F41008179C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBB0149C6F41008179C8 /* Foundation.framework */; };
 		B59DEBE2149C6F41008179C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B59DEBE0149C6F41008179C8 /* InfoPlist.strings */; };
-		B59DEBE5149C6F41008179C8 /* RdioLoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B59DEBE4149C6F41008179C8 /* RdioLoderTests.m */; };
 		B59DEBEF149C7022008179C8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBEE149C7022008179C8 /* MediaPlayer.framework */; };
 		B59DEBF0149C7038008179C8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DEBEE149C7022008179C8 /* MediaPlayer.framework */; };
 		B5DEAA1514EB838000339A5B /* UIBarButtonItem+WEPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DEAA0D14EB838000339A5B /* UIBarButtonItem+WEPopover.m */; };
@@ -92,6 +99,15 @@
 		B545AA2F14F367CD000AA3BF /* popoverBgSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverBgSimple.png; sourceTree = "<group>"; };
 		B545AA4414F4D358000AA3BF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		B545AA4514F4D358000AA3BF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		B58F10571532A88100B74213 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		B58F10581532A88100B74213 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		B58F10591532A88100B74213 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		B58F105A1532A88100B74213 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		B58F105B1532A88100B74213 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		B58F105C1532A88100B74213 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		B58F105E1532A88E00B74213 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		B58F10601532ACBE00B74213 /* PlaylistViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistViewControllerTest.h; sourceTree = "<group>"; };
+		B58F10611532ACBE00B74213 /* PlaylistViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewControllerTest.m; sourceTree = "<group>"; };
 		B59DEBAA149C6F41008179C8 /* RdioLoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RdioLoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59DEBAE149C6F41008179C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B59DEBB0149C6F41008179C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,8 +131,6 @@
 		B59DEBD7149C6F41008179C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B59DEBDF149C6F41008179C8 /* RdioLoderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RdioLoderTests-Info.plist"; sourceTree = "<group>"; };
 		B59DEBE1149C6F41008179C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B59DEBE3149C6F41008179C8 /* RdioLoderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RdioLoderTests.h; sourceTree = "<group>"; };
-		B59DEBE4149C6F41008179C8 /* RdioLoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioLoderTests.m; sourceTree = "<group>"; };
 		B59DEBEE149C7022008179C8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		B5DEAA0C14EB838000339A5B /* UIBarButtonItem+WEPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WEPopover.h"; sourceTree = "<group>"; };
 		B5DEAA0D14EB838000339A5B /* UIBarButtonItem+WEPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WEPopover.m"; sourceTree = "<group>"; };
@@ -136,15 +150,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B52A58BC149DC2E1000FDF0B /* Security.framework in Frameworks */,
 				B52A58BA149DC2D4000FDF0B /* AudioToolbox.framework in Frameworks */,
-				B52A58B8149DC2A6000FDF0B /* SystemConfiguration.framework in Frameworks */,
 				B52A58B6149DC29D000FDF0B /* CFNetwork.framework in Frameworks */,
-				B59DEBEF149C7022008179C8 /* MediaPlayer.framework in Frameworks */,
-				B59DEBAF149C6F41008179C8 /* UIKit.framework in Frameworks */,
-				B59DEBB1149C6F41008179C8 /* Foundation.framework in Frameworks */,
 				B59DEBB3149C6F41008179C8 /* CoreGraphics.framework in Frameworks */,
+				B59DEBB1149C6F41008179C8 /* Foundation.framework in Frameworks */,
+				B59DEBEF149C7022008179C8 /* MediaPlayer.framework in Frameworks */,
 				B52A58BE149DC381000FDF0B /* Rdio.framework in Frameworks */,
+				B52A58BC149DC2E1000FDF0B /* Security.framework in Frameworks */,
+				B52A58B8149DC2A6000FDF0B /* SystemConfiguration.framework in Frameworks */,
+				B59DEBAF149C6F41008179C8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,16 +166,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59DEBF0149C7038008179C8 /* MediaPlayer.framework in Frameworks */,
-				B59DEBD8149C6F41008179C8 /* SenTestingKit.framework in Frameworks */,
-				B59DEBD9149C6F41008179C8 /* UIKit.framework in Frameworks */,
+				B58F10631532B03100B74213 /* AudioToolbox.framework in Frameworks */,
+				B58F10651532B04B00B74213 /* CFNetwork.framework in Frameworks */,
+				B58F10671532B0A900B74213 /* CoreGraphics.framework in Frameworks */,
 				B59DEBDA149C6F41008179C8 /* Foundation.framework in Frameworks */,
+				B59DEBF0149C7038008179C8 /* MediaPlayer.framework in Frameworks */,
+				B58F10681532B0CC00B74213 /* Rdio.framework in Frameworks */,
+				B58F10641532B03100B74213 /* Security.framework in Frameworks */,
+				B59DEBD8149C6F41008179C8 /* SenTestingKit.framework in Frameworks */,
+				B58F10661532B04B00B74213 /* SystemConfiguration.framework in Frameworks */,
+				B59DEBD9149C6F41008179C8 /* UIKit.framework in Frameworks */,
+				B58F105F1532A88E00B74213 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B58F10561532A88100B74213 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				B58F10571532A88100B74213 /* NSNotificationCenter+OCMAdditions.h */,
+				B58F10581532A88100B74213 /* OCMArg.h */,
+				B58F10591532A88100B74213 /* OCMConstraint.h */,
+				B58F105A1532A88100B74213 /* OCMock.h */,
+				B58F105B1532A88100B74213 /* OCMockObject.h */,
+				B58F105C1532A88100B74213 /* OCMockRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		B59DEB9F149C6F40008179C8 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +218,7 @@
 		B59DEBAD149C6F41008179C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B58F105E1532A88E00B74213 /* libOCMock.a */,
 				B52A58BD149DC381000FDF0B /* Rdio.framework */,
 				B52A58BB149DC2E1000FDF0B /* Security.framework */,
 				B52A58B9149DC2D4000FDF0B /* AudioToolbox.framework */,
@@ -254,9 +289,10 @@
 		B59DEBDD149C6F41008179C8 /* RdioLoderTests */ = {
 			isa = PBXGroup;
 			children = (
-				B59DEBE3149C6F41008179C8 /* RdioLoderTests.h */,
-				B59DEBE4149C6F41008179C8 /* RdioLoderTests.m */,
+				B58F10561532A88100B74213 /* OCMock */,
 				B59DEBDE149C6F41008179C8 /* Supporting Files */,
+				B58F10601532ACBE00B74213 /* PlaylistViewControllerTest.h */,
+				B58F10611532ACBE00B74213 /* PlaylistViewControllerTest.m */,
 			);
 			path = RdioLoderTests;
 			sourceTree = "<group>";
@@ -429,7 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59DEBE5149C6F41008179C8 /* RdioLoderTests.m in Sources */,
+				B58F10621532ACBE00B74213 /* PlaylistViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +528,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -512,7 +551,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -555,10 +597,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RdioLoder/RdioLoder-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/RdioLoderTests";
 				INFOPLIST_FILE = "RdioLoderTests/RdioLoderTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"${SRCROOT}/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -572,10 +624,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RdioLoder/RdioLoder-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/RdioLoderTests";
 				INFOPLIST_FILE = "RdioLoderTests/RdioLoderTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"${SRCROOT}/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

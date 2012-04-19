@@ -1,8 +1,8 @@
 //
-//  ResultsViewController.m
-//  RdioLoder
+// ResultsViewController.m
+// RdioLoder
 //
-//  Created by Dustin Friel on 12-02-14.
+// Created by Dustin Friel on 12-02-14.
 //
 
 #import "ResultsViewController.h"
